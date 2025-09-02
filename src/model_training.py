@@ -15,7 +15,7 @@ def train_model():
     """Train and evaluate the readmission prediction model"""
     print("Loading and preparing data...")
     # Load and prepare data
-    df = load_data('data/diabetic_data.csv')
+    df = load_data('data\dataset_diabetes\diabetic_data.csv')
     df_clean, preprocessor = clean_data(df)
     X, y = prepare_data(df_clean, preprocessor)
     

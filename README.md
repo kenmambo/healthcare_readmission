@@ -8,6 +8,7 @@
 A machine learning project that predicts 30-day readmission risk for diabetic patients, helping healthcare providers optimize care and reduce costs.
 
 ## 📋 Table of Contents
+
 - [Business Problem](#-business-problem)
 - [Dataset](#-dataset)
 - [Methodology](#-methodology)
@@ -33,12 +34,14 @@ Hospital readmissions represent a **$26 billion annual problem** in US healthcar
 **Source**: [UCI Machine Learning Repository - Diabetes 130-US Hospitals Dataset](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008)
 
 **Key Statistics**:
+
 - **Records**: 101,766 patient encounters
 - **Features**: 50 clinical and demographic variables
 - **Time Period**: 1999-2008
 - **Hospitals**: 130 US hospitals
 
 **Key Features**:
+
 - Demographic data (age, race, gender)
 - Clinical measurements (HbA1c levels, glucose serum)
 - Medication information (23 medication types)
@@ -50,6 +53,7 @@ Hospital readmissions represent a **$26 billion annual problem** in US healthcar
 ## 🔬 Methodology
 
 ### 1. Data Cleaning & Preprocessing
+
 - **Handled missing values** using strategic imputation (race, weight)
 - **Encoded categorical variables** (medication types, admission sources)
 - **Normalized numerical features** for model consistency
@@ -58,6 +62,7 @@ Hospital readmissions represent a **$26 billion annual problem** in US healthcar
 **Tools**: Pandas, NumPy, Scikit-learn preprocessing
 
 ### 2. Exploratory Data Analysis (EDA)
+
 - **Correlation analysis** to identify key predictors
 - **Visualization** of feature distributions and relationships
 - **Statistical analysis** of readmission patterns
@@ -66,18 +71,21 @@ Hospital readmissions represent a **$26 billion annual problem** in US healthcar
 **Visualization**: Seaborn, Matplotlib (heatmaps, count plots, distribution plots)
 
 ### 3. Predictive Modeling
+
 - **Classification models**: Logistic Regression, Random Forest, XGBoost
 - **Class imbalance handling** using SMOTE (Synthetic Minority Over-sampling Technique)
 - **Hyperparameter tuning** with GridSearchCV
 - **Cross-validation** for robust performance evaluation
 
 **Model Evaluation Metrics**:
+
 - AUC-ROC curve analysis
 - Precision-Recall curves
 - F1-score, precision, recall
 - Confusion matrix analysis
 
 ### 4. Business Impact & Deployment
+
 - **Risk-scoring dashboard** for clinical decision support
 - **Priority-based patient categorization**
 - **Integration-ready API** for hospital systems
@@ -87,6 +95,7 @@ Hospital readmissions represent a **$26 billion annual problem** in US healthcar
 ## 📈 Results
 
 ### Model Performance
+
 | Model | AUC-ROC | Precision | Recall | F1-Score |
 |-------|---------|-----------|--------|----------|
 | Random Forest | 0.82 | 0.78 | 0.75 | 0.76 |
@@ -94,12 +103,14 @@ Hospital readmissions represent a **$26 billion annual problem** in US healthcar
 | XGBoost | 0.83 | 0.79 | 0.76 | 0.77 |
 
 ### Key Findings
+
 - **Top predictors**: Number of procedures, admission type, HbA1c levels, number of medications
 - **Reduced false negatives by 40%** compared to baseline models
 - **Identified 85% of high-risk patients** accurately
 - **Achieved 78% precision** in readmission prediction
 
 ### Business Impact
+
 - **Potential cost savings**: $3-5 million annually per hospital
 - **Improved patient outcomes** through targeted interventions
 - **Reduced readmission rates** by 15-20% in validation scenarios
@@ -107,10 +118,12 @@ Hospital readmissions represent a **$26 billion annual problem** in US healthcar
 ## 🚀 Installation
 
 ### Prerequisites
+
 - Python 3.8+
 - pip or uv package manager
 
 ### Quick Start
+
 ```bash
 # Clone the repository
 git clone https://github.com/kenmambo/healthcare_readmission.git
@@ -124,6 +137,7 @@ pip install -r requirements.txt
 ```
 
 ### Environment Setup
+
 ```bash
 # Create virtual environment
 python -m venv venv
@@ -136,6 +150,7 @@ uv sync
 ## 💻 Usage
 
 ### Data Preprocessing
+
 ```python
 from src.data_preprocessing import preprocess_data
 
@@ -144,6 +159,7 @@ df = preprocess_data('data/dataset_diabetes/diabetic_data.csv')
 ```
 
 ### Model Training
+
 ```python
 from src.model_training import train_model
 
@@ -152,12 +168,14 @@ model, metrics = train_model(df, model_type='random_forest')
 ```
 
 ### Dashboard
+
 ```bash
 # Run the clinical dashboard
 python app/dashboard.py
 ```
 
 ### Jupyter Notebooks
+
 ```bash
 # Explore EDA and analysis
 jupyter notebook notebooks/EDA.ipynb
@@ -165,7 +183,6 @@ jupyter notebook notebooks/EDA.ipynb
 
 ## 📁 Project Structure
 
-```
 healthcare_readmission/
 ├── data/
 │   ├── dataset_diabetes.zip          # Raw dataset
@@ -185,23 +202,25 @@ healthcare_readmission/
 ├── pyproject.toml                    # Project dependencies
 ├── uv.lock                           # Dependency lock file
 └── README.md                         # Project documentation
-```
 
 ## 🔮 Future Improvements
 
 ### Immediate Enhancements
+
 - [ ] **Additional clinical features** integration
 - [ ] **Time-series analysis** for multiple admissions patterns
 - [ ] **SHAP values** for model interpretability and feature importance
 - [ ] **Real-time prediction API** using FastAPI/Flask
 
 ### Advanced Features
+
 - [ ] **Electronic Health Record (EHR) integration**
 - [ ] **Natural language processing** for clinical notes
 - [ ] **Reinforcement learning** for personalized treatment recommendations
 - [ ] **Federated learning** for multi-hospital collaboration
 
 ### Deployment Roadmap
+
 - [ ] **Docker containerization** for easy deployment
 - [ ] **Kubernetes orchestration** for scalable deployment
 - [ ] **HIPAA-compliant cloud infrastructure**
@@ -224,7 +243,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙋‍♂️ Contact
 
 **Project Maintainer**: Ken Mambo  
-**Email**: ken@example.com  
+**Email**: [kenmambo16@gmail.com](mailto:kenmambo16@gmail.com)  
 **GitHub**: [@kenmambo](https://github.com/kenmambo)
 
 ## 📚 References
